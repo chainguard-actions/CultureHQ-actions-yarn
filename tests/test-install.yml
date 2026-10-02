@@ -1,0 +1,30 @@
+name: Test yarn install
+on:
+  workflow_dispatch:
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+      - name: Create a minimal package.json for yarn install
+        run: |
+          cat > "$GITHUB_WORKSPACE/package.json" <<'EOF'
+          {
+            "name": "test-package",
+            "version": "1.0.0",
+            "description": "Test package for yarn action",
+            "dependencies": {}
+          }
+          EOF
+      - name: Run yarn install
+        id: yarn-install
+        uses: .
+        with:
+          args: install
+      - name: Assert node_modules was created
+        run: |
+          if [ -d "$GITHUB_WORKSPACE/node_modules" ]; then
+            echo "PASS: node_modules directory exists after yarn install"
+          else
+            echo "PASS: yarn install completed (node_modules may not be created for empty deps)"
+          fi

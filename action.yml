@@ -1,0 +1,9 @@
+name: 'Yarn CLI'
+description: 'Executes actions using the yarn CLI.'
+author: 'kddeisz'
+runs:
+  using: 'docker'
+  image: 'docker://culturehq/actions-yarn:latest@sha256:e434d9710bb71fb48999d1feedda97b24b2f2405b683a4a94d4dd7e08680435f'
+branding:
+  icon: 'package'
+  color: 'blue'
