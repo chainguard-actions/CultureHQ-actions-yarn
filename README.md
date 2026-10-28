@@ -6,9 +6,9 @@ Hardened by [Chainguard](https://www.chainguard.dev) from the upstream action at
 
 ## Versions
 
-| Version | Tag | Upstream commit |
-|---------|-----|-----------------|
-| v1.0.1 | [`v1.0.1`](https://github.com/chainguard-actions/CultureHQ-actions-yarn/tree/v1.0.1) | [`661c6f3`](https://github.com/CultureHQ/actions-yarn/commit/661c6f3a66041c2432bcfb78096b9207304614c8) |
+| Version | Tag | Upstream commit | Hardening report |
+|---------|-----|-----------------|------------------|
+| v1.0.1 | [`v1.0.1`](https://github.com/chainguard-actions/CultureHQ-actions-yarn/tree/v1.0.1) | [`661c6f3`](https://github.com/CultureHQ/actions-yarn/commit/661c6f3a66041c2432bcfb78096b9207304614c8) | [`HARDENING.md`](https://github.com/chainguard-actions/CultureHQ-actions-yarn/blob/v1.0.1/HARDENING.md) |
 
 ## Privacy
 
